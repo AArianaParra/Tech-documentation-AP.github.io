@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Technical documentation</title>
+    <link rel="stylesheet" href="Technical-documentation-page.css">
+  </head>
+ 
+    <div class="gap"></div>
+    
+  <body> 
+     <nav id="navbar"> 
+         <header id="title">
+      <h1>PYTHON</h1>
+      <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-512.png">
+        
+    </header>
+    
+    <ul>
+       <li><a class="nav-link" href="#Introduction">Introduction
+    </a></li>
+    <li><a class="nav-link" href="#What_you_should_already_know">What you should already know
+    </a></li>
+          <li><a class="nav-link" href="#Python_overview">Python overview
+    </a></li>
+
+         <li><a class="nav-link" href="#Hello_world">Hello world
+    </a></li>
+
+          <li><a class="nav-link" href="#Variables">Variables
+    </a></li>
+          <li><a class="nav-link" href="#Declaring_variables">Declaring variables
+    </a></li>
+          <li><a class="nav-link" href="#Variable_scope">Variable scope
+    </a></li>
+               <li><a class="nav-link" href="#Global_variables">Global variables
+    </a></li>
+               <li><a class="nav-link" href="#Constants">Constants
+    </a></li>
+               <li><a class="nav-link" href="#Data_types">Data types
+    </a></li>
+
+               <li><a class="nav-link" href="#Functions">Functions
+    </a></li>
+
+               <li><a class="nav-link" href="#Python_libraries">Python libraries
+    </a></li>
+               <li><a class="nav-link" href="#Reference">Reference
+    </a></li></ul>
+  </nav>
+
+ 
+    <main id="main-doc">
+      
+      <section id="Introduction" class="main-section">
+        <header id="intro-header"><strong>INTRODUCTION</strong></header>
+        <p>Python is a high-level, interpreted programming language known for its readability and simplicity. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+         <p> It is a popular programming language created by Guido van Rossum and released in 1991. </p>
+      </section>
+      
+      <section id="What_you_should_already_know" class="main-section">
+        <header><strong>WHAT YOU SHOULD ALREADY KNOW</strong></header>
+        <p>Before you start learning Python, you should have:</p>
+        <ul id="wysk-list" class="bullet-list">
+          <li>A basic understanding of computer programming terminologies</li>
+          <li>A basic understanding of any of the programming languages is a plus.</li>
+        </ul>
+        </section>
+
+      <section id="Python_overview" class="main-section">
+        <header><strong>PYTHON OVERVIEW</strong></header>
+        <p>Python is used for web development (server-side), software development, mathematics, and system scripting.</p>
+        <p>It was developed by Guido van Rossum in the late eighties and early nineties at the National Research Institute for Mathematics and Computer Science in the Netherlands. Python is designed to be highly readable.</p>
+        </section>
+
+              <section id="Hello_world" class="main-section">
+        <header><strong>HELLO WORLD</strong></header>
+        <p>To get started with writing Python, open your IDLE and write your first "Hello world" Python code:</p>
+         <code>
+          <span>print("Hello, World!")</br><br></span>
+        </code>
+        </section>
+
+      <section id="Variables" class="main-section">
+        <header><strong>VARIABLES</strong></header>
+        <p>In Python, variables are containers for storing data values. Unlike other programming languages, Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.</p>
+        <code>
+          <span><br>x = 5</br><br>y = "Hello, World!"</br></br></span>
+        </code>
+        </section>
+
+      <section id="Declaring_variables" class="main-section">
+        <header><strong>DECLARING VARIABLES</strong></header>
+        <p>Variables are declared by simply assigning a value to a variable name using the assignment operator "="</p>
+        </section>
+
+      <section id="Variable_scope" class="main-section">
+        <header><strong>VARIABLE SCOPE</strong></header>
+        <p>The scope of a variable determines the portion of the code where you can access a particular identifier. There are two basic scopes of variables in Python − global variables and local variables</p>
+        </section>
+
+      <section  id="Global_variables" class="main-section"><header><strong>GLOBAL VARIABLES</strong></header>
+      <p>Variables that are created outside of a function are known as global variables. Global variables can be used by everyone, both inside of functions and outside.</p>
+              <code>
+          <span>x = "global"</br>def foo():<br class="code-margin">  print("x inside:", x)</br><br>foo()print("x outside:", x)</br></br></span>
+        </code>
+      </section>
+
+      <section id="Constants" class="main-section">
+        <header><strong>CONSTANTS</strong></header>
+        <p>In Python, constants are usually declared and assigned in a module. Here, the module is a new file containing variables, functions, etc which is imported to the main file. Inside the module, constants are written in all capital letters and underscores separating the words.</p>
+        <code>
+          <span>PI = 3.14</br><br>GRAVITY = 9.8</br></br></span>
+        </code>
+        </section>
+
+      <section id="Data_types" class="main-section">
+        <header><strong>DATA TYPES</strong></header>
+        <p>The data stored in memory can be of many types. For example, a person’s age is stored as a numeric value and his or her address is stored as alphanumeric characters. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.</p>
+        <ul id="data-types-list" class="bullet-list">
+          <li><b>Numeric</b></li><br>
+          <li><b>String</b></li><br>
+          <li><b>List</b></li><br>
+          <li><b>Tuple</b></li><br>
+          <li><b>Dictionary</b></li><br>
+        </ul>
+      </section>
+
+      <section id="Functions" class="main-section">
+        <header><strong>FUNCTIONS</strong></header>
+        <p>A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.</p>
+        <code><span>def hello():</br class="code-margin">    print("Hello, World!")</br><br>hello()</br></br></span></code>
+      </section>
+
+      <section id="Python_libraries" class="main-section">
+        <header><strong>PYTHON LIBRARIES</strong></header><br>
+        <ol>
+          <li><b>The Python Standard Library:</b><ul class="bullet-list"><br>
+              <li>The Python Standard Library is an integral part of Python distributions. It provides a wide range of built-in modules and functions for various tasks.</li><br>
+              <li>These modules cover system functionality (like file I/O), text processing, numeric operations, data persistence, and more.</li><br>
+              <li>Additionally, the standard library includes exceptions, warnings, and optional components.</li>
+            </ul></li>
+
+          <br><li><b>Python Package Index (PyPI):</b><ul class="bullet-list"><br>
+            <li>PyPI is a repository where you can find, install, and publish Python packages.</li><br>
+            <li>It hosts a vast collection of third-party libraries and tools created by the Python community.</li><br>
+            <li>Developers often use PyPI to manage dependencies and extend Python’s capabilities.</li></ul>
+
+            <br><li><b>Commonly Used Libraries:</b></li><ul class="bullet-list"><br>
+              <li><b>NumPy:</b> For numerical and mathematical operations.</li><br>
+            <li><b>Pandas:</b> Ideal for data manipulation and analysis.</li><br>
+            <li><b>Matplotlib and Seaborn:</b> Used for data visualization.</li><br>
+            <li><b>Scikit-learn:</b> A powerful machine learning library.</li><br>
+            <li><b>Requests:</b> Simplifies HTTP requests.</li><br>
+            <li><b>Beautiful Soup:</b> For web scraping.</li><br>
+            <li><b>Django and Flask:</b> Popular web frameworks.</li><br>
+            <li><b>SQLAlchemy:</b> For database interaction.</li><br>
+            <li><b>NLTK (Natural Language Toolkit):</b> Useful for natural language processing.</li><br>
+            <li><b>OpenCV:</b> Computer vision and image processing.</li><br>
+            <li><b>TensorFlow and PyTorch:</b> Deep learning frameworks.</li></ul><br>
+        </ol>   
+        </section>
+
+      <section id="Reference" class="main-section">
+    <header><strong>REFERENCE</strong></header>
+    <p>All the documentation in this page is taken from <a class:"reflink" href="https://www.w3schools.com/">w3schools</a> <span> - </span> <a class:"reflink" href="https://docs.python.org/">Python docs</a> <span> - </span> <a class:"reflink" href="https://www.pythoninstitute.org/">Python institute </a><a class:"reflink" href="https://en.wikipedia.org/wiki/History_of_Python"></a></p>
+        </section>
+    </main>
+  </body>
+</html>
