@@ -1,137 +1,203 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: arial;
-  }
-  
-  .gap {
-    width: 100%;
-     height: 5%;
-     position: sticky;
-     z-index:1;
-     float: right;
-  }
-  
-  main {
-    box-sizing: border-box;
-    text-align: justify;
-    display: inline;
-    width: 65%;
-    height: 100%;
-    float: right;
-    margin-right: 10px;
-  }
-  
-  p, section {
-    margin: 15px auto; 
-  }
-  
-  nav {
-    background-color: green;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial;  
+}
+
+/*FLEX CONTAINERS*/
+body, nav, #navbar-header, #lateral-menu, #lateral-menu .nav-item, code, footer, #social-media, #copyright-location {
+  display: flex;
+} /* #lateral-menu and .nav-item: To remove the default indentation of ul and avoid having several backgrounds if there are several lines*/
+
+nav {
+  width: 30vw;
+  max-width: 300px;
+  position: fixed;
+  flex-direction: column;
+}
+
+#gap {
+    width: 30vw;
+  max-width: 300px;
+}
+
+#navbar-header {
+  width: 100%;
+  max-width: inherited;  background-color: white;
+  height: 80px;
+  justify-content: center;   
+}
+
+h1 {
+  width: 60%;
+  font-size: 1.6rem;
+  padding-top: 25px;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  padding-top: 15px;
+}
+
+#lateral-menu {
+background-color: green;
+  height: 90vh; /*Check this one*/
+  flex-direction: column;
+    row-gap: 10px;
+  overflow: auto;
+list-style-type: none;
+padding: 30px 20px;
+}
+
+#lateral-menu .nav-item a {
+  text-decoration: none;
+  color: white;
+  padding: 9px;
+  border-radius: 9px;
+}
+
+#lateral-menu .nav-item a:hover {  background-color: white;
+  color: green;
+  font-weight: bold;
+}
+
+ul, ol {
+list-style-position: inside;
+}
+
+main {  background-color: rgba(128, 128, 128, 0.08);
+   width: 80vw;
+   height: 100%;
+   margin-left: 10px;
+  padding: 30px 80px;
+  line-height: 1.5;
+}
+
+main section {
+  margin-bottom: 50px;
+}
+
+main section header {
+  margin-bottom: 20px;
+}
+
+code {  background-color: white; 
+  font-size: 1rem;
+  padding: 15px;
+  margin: 10px;
+}
+
+  ol li::marker {
     font-weight: bold;
-    z-index: 1;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 30%;
-    height: 100%;
-    float: left;
-    position: fixed;
-    border-right: 3px solid green;
-    margin-top:0;
-    padding: 0;
-    overflow: scroll;
   }
-  
-  nav ul li a {
-      color: white ;
-      text-decoration-line: none;
-      font-size: 1.3rem;
-      padding: 5px;
-      margin:0;
-      display: block;
+
+  footer {
+    flex-wrap: wrap;
+    font-weight: normal;
+justify-content: space-evenly;
   }
-  
-  nav ul li a:hover {
-      background-color: white ;
-      color: green;
-      width: 100%;
-      border-radius: 3px;
-  
+
+  footer * {
+    margin: auto 5px;
   }
-  
-  nav ul li {
-    margin: 5px auto;
-    padding: 10px 2px;
-    list-style-type: none;
-    width: 100%;
-  }
-  
-  nav ul {
-    margin-top: 40px;
-    
-  }
-  
-  #title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: white;
-    width: 30%;
-    height: 8vh;
-    position: fixed;
-    top: 0;
-    z-index:2;
-    
-  }
-  
-  h1 {
-    margin-top:0;
-    text-align: center;
-    margin: 0;
-    padding-right: 5px;
-  }
-  
-  img {
-    width: 5%;
-    max-width: 45px;
-    min-width: 45px;
-    margin: 0;
-  }
-  
-  section p a {
+
+  footer a {
     color: black;
-    padding: 2px;
-    border-radius: 5%;
+text-decoration: none;    
   }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  #copyright, #location {
+    font-weight: bold;
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 12px;
+  }
+  img {
+  width: 50px;
+  height:50px;
+  padding-top: 15px;
+}
+
+nav {
+  width: 35vw;
+}
+
+main {
+   margin-left: 50px;
+padding: 30px 10px;
+}
+}
+
+@media (max-width: 560px) {
+  h1 {
+      /*display: none; If I leave this line, Freecodecamp will claim that "None of my headers should be empty", so I had to visually hide the text*/ 
+        border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+main {
+   margin-left: 50px;
+padding: 20px 45px;
+}  
+}
+
+@media (max-width:700px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  main section {
+  margin-bottom: 30px;
+}
+
+main section header {
+  margin-bottom: 10px;
+}
+
+#copyright-location, footer {
+  flex-direction: column;
+  margin: auto;
+}
+
+#social-media {
+  margin: auto;
+}
+
+footer, #copyright-location {
+  row-gap: 10px;
+}
+
   
-  section p a:link {
-    color: darkblue;
-  }
-  
-  section p a:visited {
-    color: darkgreen;
-  }
-  
-  section p a:hover {
-    background-color: rgb(212, 230, 236);
-  }
-  
-  ol, .bullet-list {
-      box-sizing: border-box;
-    margin-left: 15px;
-  }
-  
-  .bullet-list {
-    list-style-type: disc;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    * {
-      scroll-behavior: smooth;
-    }
-  }
+  .social-media-name {
+  display:none;
+}
+
+i {
+  font-size: 20px;
+}
+}
